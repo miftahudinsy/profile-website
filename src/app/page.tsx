@@ -12,7 +12,7 @@ export default function Home() {
         </h1>
         <p className="text-gray-600 text-lg mb-10">a student in Purwadhika</p>
 
-        <button className="bg-black text-white px-8 py-3 rounded-none hover:bg-gray-800 ">
+        <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 ">
           READ MORE
         </button>
       </div>
