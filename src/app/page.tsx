@@ -37,8 +37,15 @@ export default function Home() {
             I am a student at Purwadhika.
           </p>
 
-          <div className="flex justify-center gap-10 mt-20 px-100">
-            <Image src="/rex.png" alt="Rex Profile" width={300} height={300} />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-20 mt-20 px-50 ">
+            <div className="flex justify-end">
+              <Image
+                src="/rex.png"
+                alt="Rex Profile"
+                width={300}
+                height={300}
+              />
+            </div>
             <div className="space-y-5">
               <div className="text-gray-600 text-2xl">About Me</div>
               <p className="text-gray-600 text-md leading-8">
