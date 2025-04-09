@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-// Import icons
 import { SiJavascript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -89,12 +88,70 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Portofolio section */}
-      <div id="portofolio" className="bg-gray-100">
-        <div className="flex flex-col items-center justify-center p-6 lg:p-12">
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center mb-4">
-            My Portofolio
+      {/* Portofolio section - Updated styles and content */}
+      <div id="portofolio" className="bg-gray-800 text-white">
+        <div className="flex flex-col items-center justify-center py-12 px-6 lg:py-24 lg:px-12">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-10 md:mb-16">
+            Portfolio
           </h2>
+          {/* Responsive Portfolio Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl">
+            {/* Portfolio Item 1 */}
+            <div className="aspect-square relative group bg-gray-700 rounded overflow-hidden">
+              <Image
+                src="/port1.png"
+                alt="Portfolio Item 1"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Blog Card</h3>
+                <p className="text-sm mb-4">A simple blog card page</p>
+                <button className="bg-yellow-500 text-gray-900 px-4 py-2 rounded text-sm font-semibold flex items-center gap-2 hover:bg-yellow-400 transition-colors">
+                  See Details <FaArrowRight />
+                </button>
+              </div>
+            </div>
+
+            {/* Portfolio Item 2 */}
+            <div className="aspect-square relative group bg-gray-700 rounded overflow-hidden">
+              <Image
+                src="/port2.png"
+                alt="Portfolio Item 2"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+              />
+
+              <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Product Preview</h3>
+                <p className="text-sm mb-4">A simple product preview page</p>
+                <button className="bg-yellow-500 text-gray-900 px-4 py-2 rounded text-sm font-semibold flex items-center gap-2 hover:bg-yellow-400 transition-colors">
+                  See Details <FaArrowRight />
+                </button>
+              </div>
+            </div>
+
+            {/* Portfolio Item 3 */}
+            <div className="aspect-square relative group bg-gray-700 rounded overflow-hidden">
+              <Image
+                src="/port3.png"
+                alt="Portfolio Item 3"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+
+              <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Testimonial Grid</h3>
+                <p className="text-sm mb-4">A simple testimonial grid page</p>
+                <button className="bg-yellow-500 text-gray-900 px-4 py-2 rounded text-sm font-semibold flex items-center gap-2 hover:bg-yellow-400 transition-colors">
+                  See Details <FaArrowRight />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
