@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center p-6 gap-8 md:gap-20 lg:gap-50">
+    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center p-6 gap-8 md:gap-20 lg:gap-50 ">
       <div className="text-center md:text-left mb-8 md:mb-0 order-2 md:order-1">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
           I'm Syarif
