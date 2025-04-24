@@ -1,16 +1,10 @@
 "use client";
-import React from "react";
-import { FaGithub, FaEnvelope } from "react-icons/fa"; // Import icons
+import { FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function ContactSection() {
-  // Basic form handler (replace with actual logic later)
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // In a real application, you would handle form submission here
-    // (e.g., send data to an API endpoint or use a service like EmailJS)
-    alert("Form submitted (placeholder action)!");
-    // Optionally clear the form
-    // event.currentTarget.reset();
+    alert("Form submitted!");
   };
 
   return (
@@ -81,8 +75,7 @@ export default function ContactSection() {
           {/* Contact Info & Links */}
           <div className="space-y-6 mt-6 md:mt-0">
             <p className="text-gray-600 text-lg">
-              Feel free to reach out via the form or directly through email or
-              GitHub.
+              Feel free to reach out via the form or directly through email.
             </p>
             <div className="space-y-3">
               <a
@@ -102,7 +95,6 @@ export default function ContactSection() {
                 <span>github.com/miftahudinsy</span>
               </a>
             </div>
-            {/* You can add other links like LinkedIn here */}
           </div>
         </div>
       </div>

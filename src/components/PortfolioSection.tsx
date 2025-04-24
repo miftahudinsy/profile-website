@@ -1,12 +1,11 @@
-"use client"; // Mark as Client Component for useState
+"use client";
 
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 import React from "react";
-import PortfolioDetailModal from "./PortfolioDetailModal"; // Import the modal component
+import PortfolioDetailModal from "./PortfolioDetailModal";
 
-// Define type for portfolio item data
 interface PortfolioItem {
   id: number;
   title: string;
@@ -21,7 +20,6 @@ interface PortfolioItem {
   };
 }
 
-// Portfolio Data
 const portfolioData: PortfolioItem[] = [
   {
     id: 1,
@@ -99,7 +97,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <div id="portofolio" className="bg-gray-800 text-white">
+    <div className="bg-gray-800 text-white">
       <div className="flex flex-col items-center justify-center py-12 px-6 lg:py-24 lg:px-12">
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-10 md:mb-16">
           Portfolio
@@ -108,7 +106,7 @@ export default function PortfolioSection() {
           {portfolioData.map((item, index) => (
             <div
               key={item.id}
-              className="aspect-square relative group bg-gray-700 rounded overflow-hidden"
+              className="aspect-square relative group rounded overflow-hidden"
             >
               <Image
                 src={item.imageSrc}
@@ -117,7 +115,7 @@ export default function PortfolioSection() {
                 height={500}
                 className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-sm mb-4">{item.shortDescription}</p>
                 <button
@@ -134,7 +132,7 @@ export default function PortfolioSection() {
 
       {openModalIndex !== null && (
         <PortfolioDetailModal
-          isOpen={openModalIndex !== null}
+          isOpen={true}
           onClose={handleCloseModal}
           title={portfolioData[openModalIndex].title}
           details={portfolioData[openModalIndex].detailContent}

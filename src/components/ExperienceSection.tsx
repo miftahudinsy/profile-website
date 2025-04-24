@@ -24,7 +24,6 @@ const experiences = [
       "Utilized technologies like HTML, CSS, JavaScript, and various CMS platforms.",
     ],
   },
-  // Add more experiences if needed
 ];
 
 export default function ExperienceSection() {
@@ -40,9 +39,6 @@ export default function ExperienceSection() {
               key={exp.id}
               className="border-l-4 border-yellow-500 pl-6 md:pl-8 pb-8 relative"
             >
-              {/* Dot on the timeline */}
-              <div className="absolute -left-[9px] top-1 w-4 h-4 bg-yellow-500 rounded-full border-4 border-white"></div>
-
               <h3 className="text-2xl font-semibold text-gray-900 mb-1">
                 {exp.title}
               </h3>

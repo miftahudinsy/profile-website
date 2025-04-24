@@ -1,6 +1,3 @@
-import React from "react";
-
-// Definisikan tipe data untuk props
 interface PortfolioItemDetail {
   situation: string;
   task: string;
@@ -26,7 +23,7 @@ const PortfolioDetailModal: React.FC<PortfolioDetailModalProps> = ({
 
   return (
     // Overlay background
-    <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
+    <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
       {/* Modal content container */}
       <div className="bg-gray-700 text-white rounded-lg shadow-xl max-w-2xl w-full p-6 relative">
         {/* Close button */}
