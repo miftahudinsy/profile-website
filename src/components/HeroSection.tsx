@@ -1,6 +1,15 @@
+"use client";
+
 import Image from "next/image";
 
 export default function HeroSection() {
+  const handleScrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col md:flex-row items-center justify-center p-6 gap-8 md:gap-20 lg:gap-50 ">
       <div className="text-center md:text-left mb-8 md:mb-0 order-2 md:order-1">
@@ -17,7 +26,10 @@ export default function HeroSection() {
           I craft functional and user-centric web applications to bring your
           ideas to life
         </p>
-        <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 font-bold">
+        <button
+          onClick={handleScrollToContact}
+          className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 font-bold transition-colors"
+        >
           Contact Me
         </button>
       </div>
